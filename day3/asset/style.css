@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #222;
+}
+
+.container {
+    background-color: #fafafa;
+    padding: 50px;
+    width: 100vw;
+    min-height: 100vh;
+    transform-origin: top left;
+    position: relative;
+    z-index: 1;
+    transition: 1s;
+}
+
+.circle {
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+button {
+    font-size: 25px;
+    background-color: transparent;
+    border: 0;
+    color: #fefefe;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.open {
+    left: 60%;
+}
+
+.close {
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.circle-main {
+    left: -100px;
+    top: -100px;
+    position: fixed;
+}
+
+nav {
+    color: #fefefe;
+    line-height: 2;
+    position: fixed;
+    z-index: -1;
+    bottom: 40px;
+    left: 0;
+}
+
+nav li {
+    list-style: none;
+    margin: 50px 0;
+}
+
+.content {
+    max-width: 1014px;
+    margin: 50px auto;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.container.show-nav+nav li {
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+}
+
+.content p {
+    line-height: 1.5rem;
+    color: #333;
+}
+
+.content h2 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 550;
+}
+
+.content span {
+    color: #555;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+nav ul {
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+nav ul li+li {
+    margin-left: 15px;
+    transform: translateX(-150%);
+}
+
+nav ul li+li+li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
+}

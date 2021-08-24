@@ -1,0 +1,46 @@
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: blanchedalmond;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 85vw;
+}
+
+.image {
+    height: 80vh;
+    border-radius: 50px;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    transition: 1s;
+}
+
+.first {
+    flex: 10;
+}
+
+.image h2 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.first h2 {
+    opacity: 1;
+}
