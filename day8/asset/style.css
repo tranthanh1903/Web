@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     box-sizing: border-box;
 }
@@ -82,4 +83,90 @@ a {
 input:focus~label p, input:valid~label p {
     transform: translateY(-25px);
     color: lightblue;
+=======
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: steelblue;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form .form-text {
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+input:focus {
+    outline: 0;
+}
+
+label {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-size: 18px;
+}
+
+button {
+    font-size: 15px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    background-color: lightblue;
+}
+
+form>p {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.form-text p {
+    display: inline-block;
+    font-size: 17px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+input:focus~label p, input:valid~label p {
+    transform: translateY(-25px);
+    color: lightblue;
+>>>>>>> 54ab6a2b9a159bb841f1001856c2a0be05f3fb56
 }
