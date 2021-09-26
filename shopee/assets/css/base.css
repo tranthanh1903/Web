@@ -1,0 +1,221 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #333e48;
+    --border-color: #dbdbdb;
+
+    --header-heigh: 130px;
+    --header__top-navbar-heigh: 32px;
+    --header__bottom-navbar-heigh: calc(var(--header-heigh) - var(--header__top-navbar-heigh));
+    --header__sort-bar-heigh: 46px;
+    --mobile-header__bottom-navbar-heigh: calc(var(--header__bottom-navbar-heigh) - 30px);
+    --mobile-header__sort-bar-heigh: calc(var(--header__sort-bar-heigh) - 10px)
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* test */
+.grid__col-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.grid__col-2-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__col-10 {
+    padding-left:5px;
+    padding-right:5px;
+    width: 83.3334%;
+}
+
+/* Annimation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal layout */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 300;
+    animation: fadeIn ease-in 0.2s;
+    display: none;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__form {
+    margin: auto;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Modal Mobile */
+.modal-mobile {
+    position: fixed;
+    top: var(--header-heigh);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+/* Button Style */
+.btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;   
+    border-radius: 2px;
+    font-size: 1.4rem;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn.btn--size-s {
+    height: 32px;
+    font-size: 1.2rem;
+}
+
+/* Selection */
+.select-input-wrap {
+    position: relative;
+}
+
+.select-input {
+    height: 36px;
+    padding: 0 12px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    min-width: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    padding: 8px 0;
+    list-style: none;
+    display: none;
+    z-index: 1;
+}
+
+.select-input__list::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.select-input__items {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+}
+
+.select-input__items-link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.select-input__items-link:hover {
+    color: rgb(255, 51, 0);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-items--active .pagination-items__link {
+    background-color: rgb(248, 93, 37);
+    color: var(--white-color);
+    border-radius: 2px;
+}
+
+.pagination-items--active .pagination-items__link:hover {
+    filter: brightness(95%);
+}
+
+.pagination-items__link {
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #939393;
+    margin: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.pagination-items__icon {
+
+}
